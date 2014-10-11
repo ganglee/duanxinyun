@@ -9,9 +9,8 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'language' => 'zh-cn',
-    'sourceLanguage' => 'zh-cn',
     'timeZone' => 'Asia/Shanghai',
+    'language' => 'zh-cn',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
