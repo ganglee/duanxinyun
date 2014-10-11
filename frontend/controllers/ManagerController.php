@@ -75,8 +75,9 @@ class ManagerController extends Controller
         $model = new Post();
 
         if ($model->load(Yii::$app->request->post())) {
+
             if ($model->save()) {
-                return $this->redirect(['index', 'category_id' => $model->category_id]);
+                return $this->redirect(['index', 'item' => 'add_user_success', 'id' => '1']);
             }
         } else {
             return $this->render('create', [
@@ -95,6 +96,40 @@ class ManagerController extends Controller
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
+    }
+
+    /**
+     * Updates an existing Post model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->save();
+            return $this->redirect(['index', 'item' => 'update_user_success', 'id' => '1']);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Deletes an existing Post model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+        $model->delete();
+
+        return $this->redirect(['index', 'item' => 'delete_user_success', 'id' => '1']);
     }
 
     /**

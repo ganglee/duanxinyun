@@ -25,19 +25,9 @@ $this->registerJs('$(document).delegate(".icon-image","click",function(){
     ]); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => 500]) ?>
-    <?php //$form->field($model, 'order')->textInput(['maxlength' => 500, 'placeholder' => '填写0-99的数字作为正常排序时的权重依据']) ?>
-    <?php //$this->render('upload') ?>
+    <?= $form->field($model, 'order')->textInput(['maxlength' => 500, 'placeholder' => '填写0-99的数字作为正常排序时的权重依据']) ?>
+    <?= $form->field($model, 'content')->textarea() ?>
 
-    <label class="control-label" for="post-title">内容</label>
-   <!-- <div class="form-group" style="border:#ccc solid 1px">
-        <?/*= Markdowneditor::widget(
-        [
-            'model' => $model,
-            'attribute' => 'content',
-        ])*/?>
-    </div>-->
-
-    <?= $form->field($model, 'img')->fileInput(); ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '添加新用户' : '修改用户', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

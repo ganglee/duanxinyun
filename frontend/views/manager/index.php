@@ -1,7 +1,7 @@
 <?php
-
 use yii\helpers\Html;
 use yii\grid\GridView;
+use common\models\SystemComponents;
 
 /**
  * @var yii\web\View $this
@@ -20,6 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::encode($this->title) ?>
             <?= Html::a('新增用户', ['create'], ['class' => 'btn btn-success pull-right']) ?>
         </h1>
+
+        <?= (isset($_GET['item'])) ? $this->render('../layouts/update_callback.php', ['id' => $_GET['id']]) : null; ?>
 
         <?= GridView::widget([
             'dataProvider' => $dataProvider,

@@ -7,21 +7,16 @@ use yii\helpers\Html;
 /* @var $message string */
 /* @var $exception Exception */
 
-$this->title = $name;
+//$this->title = $name;
+$this->title = 'ERROR';
 ?>
-<div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="site-index">
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+    <div class="jumbotron" style="margin-top: 150px;">
+        <?= Html::img('http://img3.3lian.com/2006/020/29/02.gif') ?>
+        <h1>ERROE</h1>
     </div>
 
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
 </div>
+

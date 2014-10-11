@@ -31,8 +31,8 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'title', 'content', 'img', 'created_at', 'updated_at'], 'required'],
-            [['user_id'], 'integer'],
+            [['title', 'content'], 'required'],
+            [['user_id', 'order'], 'integer'],
             [['content'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['title'], 'string', 'max' => 150],
@@ -53,6 +53,23 @@ class Post extends \yii\db\ActiveRecord
             'img' => '图片',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
+            'order' => '排序',
         ];
+    }
+
+    public function beforeSave($insert)
+    {
+        $this->order = empty($this->order) ? 0 : $this->order;
+
+
+        if (parent::beforeSave($insert)) {
+            if($insert)
+                $this->created_at = $this->updated_at = time();
+            else
+                $this->updated_at = time();
+            return true;
+        } else {
+            return false;
+        }
     }
 }

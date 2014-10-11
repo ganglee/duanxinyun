@@ -18,7 +18,7 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "ijackua/yii2-lepture-markdown-editor-widget": "dev-master",
+        "kartik-v/yii2-markdown": "dev-master",
         "yiisoft/yii2-apidoc": "*"
     },
     "require-dev": {

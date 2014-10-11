@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'language' => 'zH-CN',
+    'timeZone' => 'Asia/Shanghai',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
@@ -23,9 +24,9 @@ return [
             'showScriptName' => true,
             'rules' => [
                 '' => 'user/index',
-               '<controller:(consult|finacial)>' => '<controller>/index',
+                /*'<controller:(consult|finacial)>' => '<controller>/index',
                 '<controller:(consult|finacial)>/<id:\d+>' => '<controller>/view',
-                '<action:\w+>' => 'user/<action>',
+                '<action:\w+>' => 'user/<action>',*/
             ],
         ],
         'log' => [
