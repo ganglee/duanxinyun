@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div>
     <?= $this->render('../layouts/managerNav.php') ?>
 
-    <div class="post-index col-lg-9">
+    <div class="post-index col-lg-9  col-md-9 col-xs-9">
 
         <h1 class="page-header">
             <?= Html::encode($this->title) ?>

@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 
 /**
@@ -15,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div>
     <?= $this->render('../layouts/managerNav.php') ?>
 
-    <div class="post-create col-lg-9">
+    <div class="post-create col-lg-9  col-md-9 col-xs-9">
         <h1 class="page-header"><?= Html::encode($this->title) ?></h1>
 
         <?= $this->render('_form', [
