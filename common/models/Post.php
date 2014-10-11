@@ -47,12 +47,12 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'user_id' => 'User ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'img' => 'Img',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'user_id' => '用户编号',
+            'title' => '标题',
+            'content' => '内容',
+            'img' => '图片',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
         ];
     }
 }
