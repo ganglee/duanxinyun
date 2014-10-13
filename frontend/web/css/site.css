@@ -4,10 +4,11 @@ body {
 }
 
 .wrap {
-    min-height: 100%;
+    min-height: 100.1%;
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background-image:url('../images/bg.jpg');
 }
 
 .wrap > .container {
@@ -89,3 +90,31 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+/* div 背景颜色 背景圆角 */
+.bg-9-color{
+    background-color: aliceblue;
+    border-radius:6px;
+}
+
+/* 设置用户管理的左侧菜单样式start */
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: orange;
+    border-color: #428bca;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 0px solid #ddd;
+}
+/* div 左侧为 0 */
+.padding-left-none{
+    padding-left: 0px;
+}
+/* 设置用户管理的左侧菜单样式end */

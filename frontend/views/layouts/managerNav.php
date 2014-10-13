@@ -3,7 +3,7 @@ use frontend\widgets\SideNavWidget;
 
 ?>
 
-<div class="col-lg-3  col-md-3 col-xs-3" style="padding-top: 40px;">
+<div class="col-lg-3  col-md-3 col-xs-3 padding-left-none">
     <?= SideNavWidget::widget([
         'encodeLabels' => false,
         'items' => [
